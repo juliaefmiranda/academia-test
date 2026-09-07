@@ -19,11 +19,11 @@ describe('matricularAluno', () => {
     });
 
     it('Deve recusar uma idade que não seja um número', () => {
-        expect(matricularAluno('15')).toThrow('A idade não é um número válido.');
+        expect(() => matricularAluno('15')).toThrow('A idade não é um número válido.');
     });
 
     it('Deve recusar uma idade undefined', () => {
-        expect(matricularAluno(undefined)).toThrow('A idade não é um número válido.');
+        expect(() => matricularAluno(undefined)).toThrow('A idade não é um número válido.');
     });
 
     it('Deve recusar uma idade null', () => {
